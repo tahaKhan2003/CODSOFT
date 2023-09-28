@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Libre+Baskerville:wght@700&display=swap');
+
+/* font-family: 'Source Code Pro', monospace; */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Basic styling for the page */
+body {
+    font-family: 'Crimson Text', serif;
+    
+    background-size: auto;
+    /* Adjust the image size to cover the entire background */
+    background-position: center center;
+    background: #314755;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #26a0da, #314755);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #26a0da, #314755); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    padding: 0;
+    
+}
+
+.app {
+    font-family: 'Crimson Text', serif;
+
+
+    max-width: 600px;
+    margin: 0 auto;
+    /* background-color: #fff; */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-family: 'Libre Baskerville', serif;
+
+    text-align: center;
+    font-size: 24px;
+    color: white;
+}
+
+/* Styling for the date */
+#date {
+    display: inline-block;
+    font-size: 26px;
+    color: #94abd6;
+}
+
+/* Styling for the input field and button */
+.todo-input {
+    display: flex;
+}
+
+#item {
+    font-family: 'Crimson Text', serif;
+
+
+
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#enter {
+    font-family: 'Crimson Text', serif;
+
+
+
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#enter:hover {
+    background-color: #0056b3;
+}
+
+/* Styling for the to-do list items */
+.to-do-list {
+    font-family: 'Crimson Text', serif;
+
+
+
+    margin-top: 20px;
+}
+
+.item {
+    font-family: 'Crimson Text', serif;
+
+
+
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.item:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for edit and delete buttons */
+.edit-controller {
+    font-family: 'Crimson Text', serif;
+
+
+
+    display: none;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+
+.item:hover .edit-controller {
+    display: flex;
+}
+
+.done,
+.edit {
+    font-family: 'Crimson Text', serif;
+
+
+
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.done:hover,
+.edit:hover {
+    background-color: #0056b3;
+}
+
+/* Styling for save and cancel buttons */
+.update-controller {
+    font-family: 'Crimson Text', serif;
+
+
+
+    display: none;
+    margin-top: 10px;
+    justify-content: flex-end;
+}
+
+.item:hover .update-controller {
+    display: flex;
+}
+
+.saveBtn,
+.cancelBtn {
+    font-family: 'Crimson Text', serif;
+
+
+
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.saveBtn:hover,
+.cancelBtn:hover {
+    background-color: #1f8d44;
+}
+
+/* Add CSS animations for item entry */
+.item {
+    animation: fadeIn 0.5s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add CSS animations for edit controller */
+.edit-controller {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.item:hover .edit-controller {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Add CSS animations for save and cancel buttons */
+.update-controller {
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.item:hover .update-controller {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
