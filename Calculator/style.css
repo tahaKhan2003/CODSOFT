@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+html,
+body {
+    background: #000428;
+    background: -webkit-linear-gradient(to right, #004e92, #000428);
+    background: linear-gradient(to right, #004e92, #000428);
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.text-center {
+    margin: 10px;
+    text-align: center;
+    color: #00BFFF;
+}
+
+.btn {
+    width: 60px;
+    padding: 20px;
+    margin: 0 5px;
+    border: 2px solid black;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.btn-grad {
+    background-image: linear-gradient(to right, #0099F7 0%, #F11712 51%, #0099F7 100%);
+
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+
+}
+
+.btn-grad:hover {
+    background-position: right center;
+    color: #fff;
+}
+
+
+
+.row {
+    margin: 7px 5px;
+}
+
+.row input {
+    margin: 0px;
+    padding: 10px 12px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 20px;
+}
